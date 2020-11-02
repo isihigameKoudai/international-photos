@@ -38,6 +38,7 @@ This is web site for photographers which is export and challenge to internationa
 - [IPA(International Photography Awards)](https://www.photoawards.com/)
 - [TIFA(Tokyo International Foto Awards)](https://www.tokyofotoawards.jp/)
 - [MIFA(Moscow International Foto Awards)](https://www.moscowfotoawards.com/)
+- [PX3](https://px3.fr/)
 - [1x](https://1x.com/)
 - [OneEyeLand](https://oneeyeland.com/)
 	- [World’s Top 10 Black & White Photographers](https://oneeyeland.com/top-10/photo-contest/black-and-white/)
