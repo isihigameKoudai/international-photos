@@ -1,8 +1,14 @@
 const path = require('path');
 
+const srcDir = './src';
 const serverless = process.env.SERVELESS;
-const configServeless = serverless ? { target: serverless} : {};
+const configServerless = serverless ? { target: serverless} : {};
 
 module.exports = {
-  dir: './src'
+  dir: srcDir,
+  configServerless,
+  webpack(config) {
+    config.resolve.alias["@"] = path.resolve(__dirname, srcDir);
+    return config;
+  }
 }

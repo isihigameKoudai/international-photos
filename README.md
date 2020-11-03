@@ -29,6 +29,9 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
+- [DashBoard](https://vercel.com/koudaiishigame/international-photos)
+- [site](https://international-photos-git-main.koudaiishigame.vercel.app/)
+
 ## About International Photos Site
 
 This is web site for photographers which is export and challenge to international photo competitions. You can confirm photo competitions schedules.
