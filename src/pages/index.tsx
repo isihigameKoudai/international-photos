@@ -1,4 +1,5 @@
-import { NextPage } from 'next';
+import * as React from 'react';
+import { NextPage, GetStaticProps } from 'next';
 
 import site from '@/assets/json/site.json';
 
@@ -12,7 +13,7 @@ const IndexPage: NextPage = props => {
   )
 }
 
-export const getStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const props: object = { sites: site.sites };
   return { props };
 }
