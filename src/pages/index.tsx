@@ -1,20 +1,35 @@
 import * as React from 'react';
-import { NextPage, GetStaticProps } from 'next';
+import { NextPage, GetStaticProps } from 'next'
 
-import site from '@/assets/json/site.json';
+import style from '@/assets/style/layout.module.scss';
+
+import Tile from '@/components/Tile';
+import ImageBox from '@/components/ImageBox';
+import sitePc from '@/assets/json/sitePc.json';
 
 const IndexPage: NextPage = props => {
-  console.log(props);
-  const { sites } = props;
+  const { sitePc } = props;
+  console.log(props, sitePc);
+
   return (
-    <div id="top">
-    { sites.map((item, index) => <div key={index}>{item.name}</div> ) }
+    <div id="top" className={style.container}>
+      { sitePc.map(item => {
+        if (item.name) return <Tile name={item.name} awards={item.awards} deadline={item.deadline} link={item.link} />
+
+        return <ImageBox className="hello" />
+      })}
     </div>
   )
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const props: object = { sites: site.sites };
+  const splicedSitePc = sitePc.sites;
+  // レイアウトのため空白のタイル部分を入れる
+  [1, 8, 12].forEach(num => {
+    splicedSitePc.splice(num, 0, {})
+  })
+
+  const props: object = { sitePc: splicedSitePc };
   return { props };
 }
 

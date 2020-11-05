@@ -11,7 +11,7 @@ class MyDocument extends Document {
     return (
       <Html lang="ja">
         <Head title="international photos" />
-        <body>
+        <body style={{ margin: 0 }}>
           <Main />
           <NextScript />
         </body>

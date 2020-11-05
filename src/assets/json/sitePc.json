@@ -1,0 +1,78 @@
+{
+  "sites":[{
+    "name": "IPA",
+    "awards": "International Photography Awards",
+    "deadline": "20200101",
+    "link": "https://www.photoawards.com/"
+  },{
+    "name": "TIFA",
+    "awards": "Tokyo International Foto Awards",
+    "deadline": "20200101",
+    "link": "https://www.tokyofotoawards.jp/"
+  },{
+    "name": "MIFA",
+    "awards": "Moscow International Foto Awards",
+    "deadline": "20200101",
+    "link": "https://www.moscowfotoawards.com/"
+  },{
+    "name": "PX3",
+    "awards": "Le Prix de la Photographie de Paris",
+    "deadline": "20200101",
+    "link": "https://px3.fr/"
+  },{
+    "name": "1x",
+    "awards": "",
+    "deadline": "20200101",
+    "link": "https://1x.com/"
+  },{
+    "name": "OneEyeLand",
+    "awards": "World’s Top 10 Black & White Photographers",
+    "deadline": "20200101",
+    "link": "https://oneeyeland.com/top-10/photo-contest/black-and-white/"
+  },{
+    "name": "OneEyeLand",
+    "awards": "World’s Top 10 Fashion Photographers",
+    "deadline": "20200101",
+    "link": "https://oneeyeland.com/top-10/photo-contest/fashion/"
+  },{
+    "name": "OneEyeLand",
+    "awards": "World’s Top 10 Fine Art Photographers",
+    "deadline": "20200101",
+    "link": "https://oneeyeland.com/top-10/photo-contest/fine-art/"
+  },{
+    "name": "OneEyeLand",
+    "awards": "World’s Top 10 Landscape Photographers",
+    "deadline": "20200101",
+    "link": "https://oneeyeland.com/top-10/photo-contest/landscape/"
+  },{
+    "name": "OneEyeLand",
+    "awards": "World’s Top 10 Mobile Photographers",
+    "deadline": "20200101",
+    "link": "https://oneeyeland.com/top-10/photo-contest/mobile/"
+  },{
+    "name": "OneEyeLand",
+    "awards": "World's Top 10 Still Life Photographers",
+    "deadline": "20200101",
+    "link": "https://oneeyeland.com/top-10/photo-contest/still-life/"
+  },{
+    "name": "OneEyeLand",
+    "awards": "World’s Top 10 Wedding Photographers",
+    "deadline": "20200101",
+    "link": "https://oneeyeland.com/top-10/photo-contest/wedding/"
+  },{
+    "name": "OneEyeLand",
+    "awards": "OneEyeLand Awards",
+    "deadline": "20200101",
+    "link": ""
+  },{
+    "name": "Fine Art Photographer Awards",
+    "awards": "",
+    "deadline": "20200101",
+    "link": "https://fineartphotoawards.com/"
+  },{
+    "name": "Sony World Photography Awards",
+    "awards": "",
+    "deadline": "20200101",
+    "link": "https://www.worldphoto.org/ja"
+  }]
+}
