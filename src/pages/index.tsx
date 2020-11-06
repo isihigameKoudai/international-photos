@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { NextPage, GetStaticProps } from 'next'
+import clone from 'rfdc';
 
 import style from '@/assets/style/layout.module.scss';
 
@@ -14,7 +15,7 @@ const IndexPage: NextPage = props => {
   return (
     <div id="top" className={style.container}>
       { sitePc.map(item => {
-        if (item.name) return <Tile name={item.name} awards={item.awards} deadline={item.deadline} link={item.link} />
+        if (item.name) return <Tile name={item.name} awards={item.awards} deadline={item.deadline} link={item.link} tileStyle={item.tileStyle} />
 
         return <ImageBox className="hello" />
       })}
@@ -22,8 +23,11 @@ const IndexPage: NextPage = props => {
   )
 }
 
+const deepCopy = clone();
+
 export const getStaticProps: GetStaticProps = async () => {
-  const splicedSitePc = sitePc.sites;
+  const splicedSitePc = deepCopy(sitePc.sites);
+
   // レイアウトのため空白のタイル部分を入れる
   [1, 8, 12].forEach(num => {
     splicedSitePc.splice(num, 0, {})

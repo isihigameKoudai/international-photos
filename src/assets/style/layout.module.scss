@@ -1,5 +1,14 @@
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows:  1fr 1fr 1fr;
+  grid-template-rows:  1fr 1fr 1fr 1fr 1fr;
+  width: 1080px;
+  margin: 0 auto;
 }
+
+@media screen and (max-width: 1080px) {
+  .container {
+    width: 100%;
+  }
+}
+
