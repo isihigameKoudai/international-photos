@@ -8,30 +8,55 @@ import Tile from '@/components/Tile';
 import ImageBox from '@/components/ImageBox';
 import sitePc from '@/assets/json/sitePc.json';
 
-const IndexPage: NextPage = props => {
+import image1 from '@/assets//img/image1.jpg';
+
+const IndexPage: NextPage<any> = props => {
   const { sitePc } = props;
-  console.log(props, sitePc);
 
   return (
     <div id="top" className={style.container}>
-      { sitePc.map(item => {
-        if (item.name) return <Tile name={item.name} awards={item.awards} deadline={item.deadline} link={item.link} tileStyle={item.tileStyle} />
+      { sitePc.map((item, index) => {
+        if (item.deadline) return <Tile key={index} name={item.name} awards={item.awards} deadline={item.deadline} link={item.link} tileStyle={item.tileStyle} />
 
-        return <ImageBox className="hello" />
+        return <ImageBox key={index} src={item.src} name={item.name} />
       })}
     </div>
   )
 }
 
 const deepCopy = clone();
+type TSite = {
+  name: string;
+  award: string;
+  deadline: string;
+  tileStyle: 'red' | 'black' | 'white';
+}
+
+type TImage = {
+  src: string;
+  name: string;
+}
+
+type TList = TSite | TImage
 
 export const getStaticProps: GetStaticProps = async () => {
-  const splicedSitePc = deepCopy(sitePc.sites);
+  const splicedSitePc: TList[] = deepCopy(sitePc.sites);
+  const imageList: TImage[] = [{
+    src: image1,
+    name: 'image1'
+  },{
+    src: image1,
+    name: 'image1'
+  },{
+    src: image1,
+    name: 'image1'
+  }]
 
-  // レイアウトのため空白のタイル部分を入れる
-  [1, 8, 12].forEach(num => {
-    splicedSitePc.splice(num, 0, {})
-  })
+  const arr: number[] = [1, 8, 12];
+  arr.map((num, i) => {
+    console.log(num, i);
+    splicedSitePc.splice(num, 0, imageList[i])
+  });
 
   const props: object = { sitePc: splicedSitePc };
   return { props };

@@ -3,8 +3,9 @@ import style from './style.module.scss';
 
 type TProps = {
   name: string;
-  title: string | null | undefined;
   deadline: string;
+  awards: string;
+  link: string;
   tileStyle: 'red' | 'black' | 'white' | null | undefined;
 }
 
