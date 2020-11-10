@@ -1,7 +1,7 @@
 .item {
   border: solid 1px #222;
   box-sizing: border-box;
-  height: 480px;
+  min-height: 480px;
 
   display: flex;
   justify-content: center;

@@ -16,7 +16,7 @@ const IndexPage: NextPage<any> = props => {
   return (
     <div id="top" className={style.container}>
       { sitePc.map((item, index) => {
-        if (item.deadline) return <Tile key={index} name={item.name} awards={item.awards} deadline={item.deadline} link={item.link} tileStyle={item.tileStyle} />
+        if (item.deadline !== undefined) return <Tile key={index} name={item.name} awards={item.awards} deadline={item.deadline} link={item.link} tileStyle={item.tileStyle} />
 
         return <ImageBox key={index} src={item.src} name={item.name} />
       })}

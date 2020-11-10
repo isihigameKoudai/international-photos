@@ -8,6 +8,6 @@ type TProps = {
 
 export const ImageBox: React.FC<TProps> = props => (
   <div className={ style.container }>
-    <img className={ style.img } src={ props.src } alt={ props.name } />
+    <img className={ style.img } src={ props.src } alt={ props.src } />
   </div>
 );
