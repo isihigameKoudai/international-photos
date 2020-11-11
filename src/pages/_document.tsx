@@ -13,7 +13,7 @@ class MyDocument extends Document {
       <Html lang="ja">
         <Head>
           <title>international photos</title>
-          <meta charset="utf-8" />
+          <meta charSet="utf-8" />
           <meta name="viewport" content="initial-scale=1.0, width=device-width" />
           <meta name="description" content="This is website for photographers which are post and challenge international photo competitions." />
           <link rel="canonical" href="https://international-photos-git-main.koudaiishigame.vercel.app/" />
