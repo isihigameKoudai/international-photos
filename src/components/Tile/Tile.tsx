@@ -32,7 +32,7 @@ export const Tile: React.FC<TProps> = props => (
       <p className={style.text}>
           <span className={style.name}>{ props.name }</span><br/>
           <span className={style.title}>{ props.awards }</span><br/>
-          <span className={style.deadline}>{ props.deadline.length === 8 ? `deadline: ${props.deadline}` : 'Coming soon' }</span>
+          <span className={style.deadline}>{ props.deadline.length === 8 ? `deadline: ${props.deadline}` : 'Will be coming' }</span>
       </p>
     </a>
   </div>

@@ -9,6 +9,8 @@ import ImageBox from '@/components/ImageBox';
 import sitePc from '@/assets/json/sitePc.json';
 
 import image1 from '@/assets//img/image1.jpg';
+import image2 from '@/assets//img/image2.jpeg';
+import image3 from '@/assets//img/image3.jpeg';
 
 const IndexPage: NextPage<any> = props => {
   const { sitePc } = props;
@@ -45,16 +47,15 @@ export const getStaticProps: GetStaticProps = async () => {
     src: image1,
     name: 'image1'
   },{
-    src: image1,
-    name: 'image1'
+    src: image2,
+    name: 'image2'
   },{
-    src: image1,
-    name: 'image1'
+    src: image3,
+    name: 'image3'
   }]
 
   const arr: number[] = [1, 8, 12];
   arr.map((num, i) => {
-    console.log(num, i);
     splicedSitePc.splice(num, 0, imageList[i])
   });
 
