@@ -9,7 +9,6 @@ import * as gtag from '../service/gtags';
 const App: NextPage<AppProps> = ({ Component, pageProps }) => {
   const router = useRouter()
   React.useEffect(() => {
-    console.log("useEffect");
 
     const handleRouteChange = (url) => {
       gtag.pageview(url)
