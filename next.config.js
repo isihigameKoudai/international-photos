@@ -7,6 +7,9 @@ const configServerless = serverless ? { target: serverless} : {};
 module.exports = {
   dir: srcDir,
   configServerless,
+  env: {
+    GOOGLE_ANALYTICS_ID: process.env.GOOGLE_ANALYTICS_ID
+  },
   webpack(config) {
     config.resolve.alias["@"] = path.resolve(__dirname, srcDir);
     config.module.rules.push({
