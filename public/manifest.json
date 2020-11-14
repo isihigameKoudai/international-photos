@@ -1,0 +1,18 @@
+{
+  "name": "International Photos",
+  "lang": "ja",
+  "short_name": "International Photos",
+  "title": "International Photos",
+  "og:title": "International Photos",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "description":
+    "My portfolio site. Photograph, Art direction, Web, Engineering, Creative.",
+  "og:description":
+    "My portfolio site. Photograph, Art direction, Web, Engineering, Creative.",
+  "icons": [{
+    "src": "/favicon.icon",
+    "sizes": "72x72",
+    "type": "image/ico"
+  }]
+}

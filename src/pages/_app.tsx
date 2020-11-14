@@ -23,6 +23,16 @@ const App: NextPage<AppProps> = ({ Component, pageProps }) => {
       <Head>
         <title>international photos</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+
+        <link rel="manifest" href="/manifest.json" />
+        <link
+          href="/favicon.icon"
+          rel="icon"
+          type="image/icon"
+          sizes="16x16"
+        />
+        <link rel="apple-touch-icon" href="/favicon.icon"></link>
+        <meta name="theme-color" content="#fefefe" />
       </Head>
       <Component {...pageProps} />
     </>
