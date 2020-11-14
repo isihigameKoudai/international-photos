@@ -7,9 +7,9 @@
   "display": "fullscreen",
   "orientation": "portrait",
   "description":
-    "My portfolio site. Photograph, Art direction, Web, Engineering, Creative.",
+    "This is website for photographers which are post and challenge international photo competitions.",
   "og:description":
-    "My portfolio site. Photograph, Art direction, Web, Engineering, Creative.",
+    "This is website for photographers which are post and challenge international photo competitions.",
   "icons": [{
     "src": "/favicon.icon",
     "sizes": "72x72",
