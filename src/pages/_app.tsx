@@ -4,7 +4,7 @@ import { AppProps } from 'next/app'
 import Head from 'next/head'
 
 import { useRouter } from 'next/router'
-import * as gtag from '../service/gtags.ts';
+import * as gtag from '../service/gtags';
 
 const App: NextPage<AppProps> = ({ Component, pageProps }) => {
   const router = useRouter()
