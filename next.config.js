@@ -1,12 +1,18 @@
 const path = require('path');
+const withPWA = require('next-pwa')
+const runtimeCaching = require('next-pwa/cache')
 
 const srcDir = './src';
 const serverless = process.env.SERVELESS;
 const configServerless = serverless ? { target: serverless} : {};
 
-module.exports = {
+module.exports = withPWA({
   dir: srcDir,
   configServerless,
+  pwa: {
+    dest: 'public',
+    runtimeCaching,
+  },
   env: {
     GOOGLE_ANALYTICS_ID: process.env.GOOGLE_ANALYTICS_ID
   },
@@ -23,4 +29,4 @@ module.exports = {
     })
     return config;
   }
-}
+})
