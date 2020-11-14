@@ -14,7 +14,6 @@ import image3 from '@/assets//img/image3.jpeg';
 
 const IndexPage: NextPage<any> = props => {
   const { sitePc } = props;
-  console.log(process.env);
 
   return (
     <div id="top" className={style.container}>
