@@ -8,10 +8,6 @@ import Tile from '@/components/Tile';
 import ImageBox from '@/components/ImageBox';
 import sitePc from '@/assets/json/sitePc.json';
 
-import image1 from '@/assets//img/image1.jpg';
-import image2 from '@/assets//img/image2.jpeg';
-import image3 from '@/assets//img/image3.jpeg';
-
 const IndexPage: NextPage<any> = props => {
   const { sitePc } = props;
 
@@ -44,13 +40,13 @@ type TList = TSite | TImage
 export const getStaticProps: GetStaticProps = async () => {
   const splicedSitePc: TList[] = deepCopy(sitePc.sites);
   const imageList: TImage[] = [{
-    src: image1,
-    name: 'image1'
+    src: '/image1.jpg',
+    name: 'image1',
   },{
-    src: image2,
+    src: '/image2.jpeg',
     name: 'image2'
   },{
-    src: image3,
+    src: '/image3.jpeg',
     name: 'image3'
   }]
 
