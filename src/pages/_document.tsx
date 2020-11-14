@@ -1,6 +1,5 @@
 import * as React from 'react'
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-import card from '@/assets/img/card.png'
 import { GOOGLE_ANALYTICS_ID } from '../service/gtags'
 
 class MyDocument extends Document {
