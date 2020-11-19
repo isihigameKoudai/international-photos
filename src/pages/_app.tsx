@@ -6,12 +6,16 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import * as gtag from '../service/gtags';
 
+const isDev: boolean = process.env.NODE_ENV !== 'production'
+
 const App: NextPage<AppProps> = ({ Component, pageProps }) => {
   const router = useRouter()
   React.useEffect(() => {
 
     const handleRouteChange = (url) => {
-      gtag.pageview(url)
+      if (isDev) {
+        gtag.pageview(url)
+      }
     }
     router.events.on('routeChangeComplete', handleRouteChange)
     return () => {
