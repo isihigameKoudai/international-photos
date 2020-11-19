@@ -8,7 +8,7 @@
   "orientation": "portrait",
   "theme_color": "#fff",
   "background_color": "#fff",
-  "start_url": "https://international-photos.vercel.app/",
+  "start_url": "/",
   "description":
     "This is website for photographers which are post and challenge international photo competitions.",
   "og:description":
