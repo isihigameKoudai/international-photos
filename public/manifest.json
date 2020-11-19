@@ -8,12 +8,13 @@
   "orientation": "portrait",
   "theme_color": "#fff",
   "background_color": "#fff",
+  "start_url": "/",
   "description":
     "This is website for photographers which are post and challenge international photo competitions.",
   "og:description":
     "This is website for photographers which are post and challenge international photo competitions.",
   "icons": [{
-    "src": "/icon144.png",
+    "src": "/icon144x144.png",
     "sizes": "144x144",
     "type": "image/png"
   },{
