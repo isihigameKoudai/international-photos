@@ -4,6 +4,7 @@
   "short_name": "International Photos",
   "title": "International Photos",
   "og:title": "International Photos",
+  "start_url": "https://international-photos.vercel.app/",
   "display": "standalone",
   "orientation": "portrait",
   "theme_color": "#fff",
