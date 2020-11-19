@@ -19,11 +19,11 @@ class MyDocument extends Document {
           <meta property="og:type" content="website" />
           <meta property="og:locale" content="ja_JP" />
           <meta property="og:url" content="https://international-photos.vercel.app/" />
-          <meta property="og:image" content='/card.png' />
+          <meta property="og:image" content='https://international-photos.vercel.app/card.png' />
           <meta name="twitter:title" content="international photos" />
-          <meta name="twitter:card" content='/card.png' />
+          <meta name="twitter:card" content='https://international-photos.vercel.app/card.png' />
           <meta name="twitter:description" content="This is website for photographers which are post and challenge international photo competitions." />
-          <meta name="twitter:image" content='/card.png' />
+          <meta name="twitter:image" content='https://international-photos.vercel.app/card.png' />
           <link rel="dns-prefetch" href="https://international-photos.vercel.app/" />
 
           <script
