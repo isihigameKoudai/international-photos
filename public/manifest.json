@@ -1,0 +1,25 @@
+{
+  "name": "International Photos",
+  "lang": "ja",
+  "short_name": "International Photos",
+  "title": "International Photos",
+  "og:title": "International Photos",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#fff",
+  "background_color": "#fff",
+  "description":
+    "This is website for photographers which are post and challenge international photo competitions.",
+  "og:description":
+    "This is website for photographers which are post and challenge international photo competitions.",
+  "icons": [{
+    "src": "/icon144.png",
+    "sizes": "144x144",
+    "type": "image/png"
+  },{
+    "src": "/maskable_icon.png",
+    "sizes": "512x512",
+    "type": "image/png",
+    "purpose": "any maskable"
+  }]
+}
