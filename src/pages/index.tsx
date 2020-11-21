@@ -6,10 +6,16 @@ import style from '@/assets/style/layout.module.scss';
 
 import Tile from '@/components/Tile';
 import ImageBox from '@/components/ImageBox';
+import Button from '@/components/Button';
 import sitePc from '@/assets/json/sitePc.json';
+import { useCallback } from 'react';
 
 const IndexPage: NextPage<any> = props => {
   const { sitePc } = props;
+
+  const addHome = useCallback(() => {
+    console.log('button');
+  })
 
   return (
     <div id="top" className={style.container}>
@@ -18,6 +24,7 @@ const IndexPage: NextPage<any> = props => {
 
         return <ImageBox key={index} src={item.src} name={item.name} />
       })}
+      <Button title='button' onClick={addHome} />
     </div>
   )
 }
