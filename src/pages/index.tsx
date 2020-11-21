@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { NextPage, GetStaticProps } from 'next'
+import React, { useCallback } from 'react';
+import { NextPage, GetStaticProps } from 'next';
 import clone from 'rfdc';
 
 import style from '@/assets/style/layout.module.scss';
@@ -8,14 +8,35 @@ import Tile from '@/components/Tile';
 import ImageBox from '@/components/ImageBox';
 import Button from '@/components/Button';
 import sitePc from '@/assets/json/sitePc.json';
-import { useCallback } from 'react';
+import { useEffect } from 'react';
 
 const IndexPage: NextPage<any> = props => {
   const { sitePc } = props;
 
+  let installPrompt: BeforeInstallPromptEvent | null = null
+  useEffect(() => {
+    window.addEventListener('beforeinstallprompt', e => {
+      e.preventDefault();
+      installPrompt = e;
+    })
+  }, []);
+
   const addHome = useCallback(() => {
-    console.log('button');
-  })
+    console.log('button', installPrompt);
+
+    if (!installPrompt) return;
+    installPrompt.userChoice.then((choice) => {
+      console.log(choice);
+
+      if (choice.outcome === 'accepted') {
+        console.log('User accepted the A2HS prompt');
+      } else {
+        console.log('User dismissed the A2HS prompt');
+      }
+
+      installPrompt = null;
+    });
+  }, [])
 
   return (
     <div id="top" className={style.container}>
