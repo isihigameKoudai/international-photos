@@ -89,5 +89,65 @@
     "deadline": "20201113",
     "link": "https://www.worldphoto.org/ja",
     "tileStyle": "white"
+  },{
+    "name": "Applied Arts Awards",
+    "awards": "Applied Arts - Photography",
+    "deadline": "",
+    "link": "https://www.appliedartsmag.com/photography_awards/ ",
+    "tileStyle": "red"
+  },{
+    "name": "communication arts",
+    "awards": "CA2021 photography competitions",
+    "deadline": "20210305",
+    "link": "https://www.commarts.com/competition/2021-photography",
+    "tileStyle": "white"
+  },{
+    "name": "D & AD",
+    "awards": "D & AD",
+    "deadline": "",
+    "link": "https://www.dandad.org/",
+    "tileStyle": "white"
+  },{
+    "name": "Graphic Competitions",
+    "awards": "Graphic Photography Annual",
+    "deadline": "20210907",
+    "link": "https://www.graphis.com/competition/photography-annual-2022/live-viewing/",
+    "tileStyle": "black"
+  },{
+    "name": "ND Awards",
+    "awards": "",
+    "deadline": "20210919",
+    "link": "https://ndawards.net/",
+    "tileStyle": "red"
+  },{
+    "name": "The AOP Awards",
+    "awards": "",
+    "deadline": "",
+    "link": "https://www.aopawards.com/",
+    "tileStyle": "black"
+  },{
+    "name": "The APA Awards",
+    "awards": "",
+    "deadline": "20201206",
+    "link": "https://annualphotoawards.com/",
+    "tileStyle": "white"
+  },{
+    "name": "Trierenberg Super Circuit",
+    "awards": "TRIERENBERG SUPER CIRCUIT 2021",
+    "deadline": "20210329",
+    "link": "http://www.supercircuit.at/Home",
+    "tileStyle": "red"
+  },{
+    "name": "WPE International Photographer awards",
+    "awards": "",
+    "deadline": "20210119",
+    "link": "https://www.wpeawards.com/",
+    "tileStyle": "black"
+  },{
+    "name": "WPPI ",
+    "awards": "WPPI's Second Half Online competition",
+    "deadline": "20201230",
+    "link": "https://wppiexpo.com/",
+    "tileStyle": "white"
   }]
 }
