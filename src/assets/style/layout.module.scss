@@ -1,8 +1,12 @@
 .footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 80px 0;
+
+  > *:not(:first-child) {
+    margin-left: 20px;
+  }
 }
 
 .container {

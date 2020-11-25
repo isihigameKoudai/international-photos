@@ -21,8 +21,8 @@ const IndexPage: NextPage<any> = props => {
         })}
       </main>
       <footer className={`${style.container} ${style.footer} ${style.footerTop}`}>
-        <a href="//twitter.com/share" className="twitter-share-button" data-text="" data-url="" data-lang="ja">Tweet</a>
-        <a href="//twitter.com/share" className="twitter-share-button" data-text="" data-url="" data-lang="ja">Tweet</a>
+        <a href="//twitter.com/share" className="twitter-share-button item" data-text="海外の国際的な写真コンテストの締め切りがまとめて見れるInternational-photos  " data-url="https://international-photos.vercel.app/" data-lang="ja">Tweet</a>
+        <div className="fb-share-button item" data-href="https://international-photos.vercel.app/" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Finternational-photos.vercel.app%2F&amp;src=sdkpreparse" className="fb-xfbml-parse-ignore">シェア</a></div>
       </footer>
     </div>
   )
