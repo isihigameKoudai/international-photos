@@ -26,6 +26,8 @@ class MyDocument extends Document {
           <meta name="twitter:image" content='https://international-photos.vercel.app/card.png' />
           <link rel="dns-prefetch" href="https://international-photos.vercel.app/" />
 
+          <script async src={`https://platform.twitter.com/widgets.js`} charSet="utf-8" />
+          <script async defer crossOrigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v9.0&appId=1704623379800034&autoLogAppEvents=1" nonce="qaEXiKQU" />
           <script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS_ID}`}
