@@ -12,12 +12,18 @@ const IndexPage: NextPage<any> = props => {
   const { sitePc } = props;
 
   return (
-    <div id="top" className={style.container}>
-      { sitePc.map((item, index) => {
-        if (item.deadline !== undefined) return <Tile key={index} name={item.name} awards={item.awards} deadline={item.deadline} link={item.link} tileStyle={item.tileStyle} />
+    <div id="top">
+      <main className={`${style.container} ${style.top}`}>
+        { sitePc.map((item, index) => {
+          if (item.deadline !== undefined) return <Tile key={index} name={item.name} awards={item.awards} deadline={item.deadline} link={item.link} tileStyle={item.tileStyle} />
 
-        return <ImageBox key={index} src={item.src} name={item.name} />
-      })}
+          return <ImageBox key={index} src={item.src} name={item.name} />
+        })}
+      </main>
+      <footer className={`${style.container} ${style.footer} ${style.footerTop}`}>
+        <a href="//twitter.com/share" className="twitter-share-button" data-text="" data-url="" data-lang="ja">Tweet</a>
+        <a href="//twitter.com/share" className="twitter-share-button" data-text="" data-url="" data-lang="ja">Tweet</a>
+      </footer>
     </div>
   )
 }

@@ -26,6 +26,7 @@ class MyDocument extends Document {
           <meta name="twitter:image" content='https://international-photos.vercel.app/card.png' />
           <link rel="dns-prefetch" href="https://international-photos.vercel.app/" />
 
+          <script async src={`https://platform.twitter.com/widgets.js`} charSet="utf-8" />
           <script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS_ID}`}
