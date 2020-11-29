@@ -145,8 +145,20 @@
     "tileStyle": "black"
   },{
     "name": "WPPI ",
+    "awards": "WPPI's First Half Online competition",
+    "deadline": "",
+    "link": "https://wppiexpo.com/",
+    "tileStyle": "white"
+  },{
+    "name": "WPPI ",
     "awards": "WPPI's Second Half Online competition",
-    "deadline": "20201230",
+    "deadline": "",
+    "link": "https://wppiexpo.com/",
+    "tileStyle": "black"
+  },{
+    "name": "WPPI ",
+    "awards": "The Annual",
+    "deadline": "",
     "link": "https://wppiexpo.com/",
     "tileStyle": "white"
   }]
