@@ -1,3 +1,2 @@
-import { useDebugValue } from 'react';
-import { SectionTitle } from './SectionTitle.tsx';
+import { SectionTitle } from './SectionTitle';
 export default SectionTitle;
