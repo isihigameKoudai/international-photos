@@ -10,6 +10,7 @@ module.exports = withPWA({
   dir: srcDir,
   configServerless,
   pwa: {
+    disable: process.env.NODE_ENV === 'development',
     dest: 'public',
     runtimeCaching,
   },
