@@ -40,7 +40,7 @@ const IndexPage: NextPage<any> = props => {
             <img className={indexStyle.icon} src="/bnd.png" alt="contact:twitter" loading="lazy" />
           </a>
         </div>
-        <div style={{ textAlign: 'center', padding: '10px 0' }}>© 2020~2021 Bright and dizain</div>
+        <div style={{ textAlign: 'center', padding: '10px 0', fontFamily: `"Yu Mincho", YuMincho, "Hiragino Minchō Pro", "Hiragino Mincho Pro", serif` }}>© 2020~2021 Bright and dizain</div>
       </footer>
     </div>
   )
