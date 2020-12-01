@@ -25,6 +25,7 @@ class MyDocument extends Document {
           <meta name="twitter:description" content="This is website for photographers which are post and challenge international photo competitions." />
           <meta name="twitter:image" content='https://international-photos.vercel.app/card.png' />
           <link rel="dns-prefetch" href="https://international-photos.vercel.app/" />
+          <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="144x144" />
 
           <script async src={`https://platform.twitter.com/widgets.js`} charSet="utf-8" />
           <script async defer crossOrigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v9.0&appId=1704623379800034&autoLogAppEvents=1" nonce="qaEXiKQU" />
