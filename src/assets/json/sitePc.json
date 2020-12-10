@@ -1,165 +1,193 @@
 {
-  "sites":[{
-    "name": "IPA",
-    "awards": "International Photography Awards",
-    "deadline": "",
-    "link": "https://www.photoawards.com/",
-    "tileStyle": "red"
-  },{
-    "name": "TIFA",
-    "awards": "Tokyo International Foto Awards",
-    "deadline": "20201130",
-    "link": "https://www.tokyofotoawards.jp/",
-    "tileStyle": "white"
-  },{
-    "name": "MIFA",
-    "awards": "Moscow International Foto Awards",
-    "deadline": "",
-    "link": "https://www.moscowfotoawards.com/",
-    "tileStyle": "white"
-  },{
-    "name": "PX3",
-    "awards": "Le Prix de la Photographie de Paris",
-    "deadline": "20210131",
-    "link": "https://px3.fr/",
-    "tileStyle": "black"
-  },{
-    "name": "1x",
-    "awards": "1x",
-    "deadline": "",
-    "link": "https://1x.com/",
-    "tileStyle": "white"
-  },{
-    "name": "OneEyeLand",
-    "awards": "World’s Top 10 Black & White Photographers",
-    "deadline": "",
-    "link": "https://oneeyeland.com/top-10/photo-contest/black-and-white/",
-    "tileStyle": "black"
-  },{
-    "name": "OneEyeLand",
-    "awards": "World’s Top 10 Fashion Photographers",
-    "deadline": "",
-    "link": "https://oneeyeland.com/top-10/photo-contest/fashion/",
-    "tileStyle": "red"
-  },{
-    "name": "OneEyeLand",
-    "awards": "World’s Top 10 Fine Art Photographers",
-    "deadline": "",
-    "link": "https://oneeyeland.com/top-10/photo-contest/fine-art/",
-    "tileStyle": "white"
-  },{
-    "name": "OneEyeLand",
-    "awards": "World’s Top 10 Landscape Photographers",
-    "deadline": "",
-    "link": "https://oneeyeland.com/top-10/photo-contest/landscape/",
-    "tileStyle": "white"
-  },{
-    "name": "OneEyeLand",
-    "awards": "World’s Top 10 Mobile Photographers",
-    "deadline": "20201225",
-    "link": "https://oneeyeland.com/top-10/photo-contest/mobile/",
-    "tileStyle": "red"
-  },{
-    "name": "OneEyeLand",
-    "awards": "World's Top 10 Still Life Photographers",
-    "deadline": "",
-    "link": "https://oneeyeland.com/top-10/photo-contest/still-life/",
-    "tileStyle": "red"
-  },{
-    "name": "OneEyeLand",
-    "awards": "World’s Top 10 Wedding Photographers",
-    "deadline": "",
-    "link": "https://oneeyeland.com/top-10/photo-contest/wedding/",
-    "tileStyle": "black"
-  },{
-    "name": "OneEyeLand",
-    "awards": "OneEyeLand Awards",
-    "deadline": "20201227",
-    "link": "https://oneeyeland.com/awards.php",
-    "tileStyle": "black"
-  },{
-    "name": "Fine Art Photography Awards",
-    "awards": "",
-    "deadline": "20210207",
-    "link": "https://fineartphotoawards.com/",
-    "tileStyle": "red"
-  },{
-    "name": "Sony World Photography Awards",
-    "awards": "",
-    "deadline": "20210107",
-    "link": "https://www.worldphoto.org/ja",
-    "tileStyle": "white"
-  },{
-    "name": "Applied Arts Awards",
-    "awards": "Applied Arts - Photography",
-    "deadline": "",
-    "link": "https://www.appliedartsmag.com/photography_awards/ ",
-    "tileStyle": "red"
-  },{
-    "name": "communication arts",
-    "awards": "CA2021 photography competitions",
-    "deadline": "20210305",
-    "link": "https://www.commarts.com/competition/2021-photography",
-    "tileStyle": "white"
-  },{
-    "name": "D & AD",
-    "awards": "D & AD",
-    "deadline": "",
-    "link": "https://www.dandad.org/",
-    "tileStyle": "white"
-  },{
-    "name": "Graphic Competitions",
-    "awards": "Graphic Photography Annual",
-    "deadline": "20210907",
-    "link": "https://www.graphis.com/competition/photography-annual-2022/live-viewing/",
-    "tileStyle": "black"
-  },{
-    "name": "ND Awards",
-    "awards": "",
-    "deadline": "20210919",
-    "link": "https://ndawards.net/",
-    "tileStyle": "red"
-  },{
-    "name": "The AOP Awards",
-    "awards": "",
-    "deadline": "",
-    "link": "https://www.aopawards.com/",
-    "tileStyle": "black"
-  },{
-    "name": "The APA Awards",
-    "awards": "",
-    "deadline": "20201206",
-    "link": "https://annualphotoawards.com/",
-    "tileStyle": "white"
-  },{
-    "name": "Trierenberg Super Circuit",
-    "awards": "TRIERENBERG SUPER CIRCUIT 2021",
-    "deadline": "20210329",
-    "link": "http://www.supercircuit.at/Home",
-    "tileStyle": "red"
-  },{
-    "name": "WPE International Photographer awards",
-    "awards": "",
-    "deadline": "20210119",
-    "link": "https://www.wpeawards.com/",
-    "tileStyle": "black"
-  },{
-    "name": "WPPI ",
-    "awards": "WPPI's First Half Online competition",
-    "deadline": "",
-    "link": "https://wppiexpo.com/",
-    "tileStyle": "white"
-  },{
-    "name": "WPPI ",
-    "awards": "WPPI's Second Half Online competition",
-    "deadline": "",
-    "link": "https://wppiexpo.com/",
-    "tileStyle": "black"
-  },{
-    "name": "WPPI ",
-    "awards": "The Annual",
-    "deadline": "",
-    "link": "https://wppiexpo.com/",
-    "tileStyle": "white"
-  }]
+  "sites": [
+    {
+      "name": "IPA",
+      "awards": "International Photography Awards",
+      "deadline": "",
+      "link": "https://www.photoawards.com/",
+      "tileStyle": "red"
+    },
+    {
+      "name": "TIFA",
+      "awards": "Tokyo International Foto Awards",
+      "deadline": "",
+      "link": "https://www.tokyofotoawards.jp/",
+      "tileStyle": "white"
+    },
+    {
+      "name": "MIFA",
+      "awards": "Moscow International Foto Awards",
+      "deadline": "",
+      "link": "https://www.moscowfotoawards.com/",
+      "tileStyle": "white"
+    },
+    {
+      "name": "PX3",
+      "awards": "Le Prix de la Photographie de Paris",
+      "deadline": "20210131",
+      "link": "https://px3.fr/",
+      "tileStyle": "black"
+    },
+    {
+      "name": "1x",
+      "awards": "1x",
+      "deadline": "",
+      "link": "https://1x.com/",
+      "tileStyle": "white"
+    },
+    {
+      "name": "OneEyeLand",
+      "awards": "World’s Top 10 Black & White Photographers",
+      "deadline": "",
+      "link": "https://oneeyeland.com/top-10/photo-contest/black-and-white/",
+      "tileStyle": "black"
+    },
+    {
+      "name": "OneEyeLand",
+      "awards": "World’s Top 10 Fashion Photographers",
+      "deadline": "",
+      "link": "https://oneeyeland.com/top-10/photo-contest/fashion/",
+      "tileStyle": "red"
+    },
+    {
+      "name": "OneEyeLand",
+      "awards": "World’s Top 10 Fine Art Photographers",
+      "deadline": "",
+      "link": "https://oneeyeland.com/top-10/photo-contest/fine-art/",
+      "tileStyle": "white"
+    },
+    {
+      "name": "OneEyeLand",
+      "awards": "World’s Top 10 Landscape Photographers",
+      "deadline": "",
+      "link": "https://oneeyeland.com/top-10/photo-contest/landscape/",
+      "tileStyle": "white"
+    },
+    {
+      "name": "OneEyeLand",
+      "awards": "World’s Top 10 Mobile Photographers",
+      "deadline": "20201225",
+      "link": "https://oneeyeland.com/top-10/photo-contest/mobile/",
+      "tileStyle": "red"
+    },
+    {
+      "name": "OneEyeLand",
+      "awards": "World's Top 10 Still Life Photographers",
+      "deadline": "",
+      "link": "https://oneeyeland.com/top-10/photo-contest/still-life/",
+      "tileStyle": "red"
+    },
+    {
+      "name": "OneEyeLand",
+      "awards": "World’s Top 10 Wedding Photographers",
+      "deadline": "",
+      "link": "https://oneeyeland.com/top-10/photo-contest/wedding/",
+      "tileStyle": "black"
+    },
+    {
+      "name": "OneEyeLand",
+      "awards": "OneEyeLand Awards",
+      "deadline": "20201227",
+      "link": "https://oneeyeland.com/awards.php",
+      "tileStyle": "black"
+    },
+    {
+      "name": "Fine Art Photography Awards",
+      "awards": "",
+      "deadline": "20210207",
+      "link": "https://fineartphotoawards.com/",
+      "tileStyle": "red"
+    },
+    {
+      "name": "Sony World Photography Awards",
+      "awards": "",
+      "deadline": "20210107",
+      "link": "https://www.worldphoto.org/ja",
+      "tileStyle": "white"
+    },
+    {
+      "name": "Applied Arts Awards",
+      "awards": "Applied Arts - Photography",
+      "deadline": "",
+      "link": "https://www.appliedartsmag.com/photography_awards/ ",
+      "tileStyle": "red"
+    },
+    {
+      "name": "communication arts",
+      "awards": "CA2021 photography competitions",
+      "deadline": "20210305",
+      "link": "https://www.commarts.com/competition/2021-photography",
+      "tileStyle": "white"
+    },
+    {
+      "name": "D & AD",
+      "awards": "D & AD",
+      "deadline": "",
+      "link": "https://www.dandad.org/",
+      "tileStyle": "white"
+    },
+    {
+      "name": "Graphic Competitions",
+      "awards": "Graphic Photography Annual",
+      "deadline": "20210907",
+      "link": "https://www.graphis.com/competition/photography-annual-2022/live-viewing/",
+      "tileStyle": "black"
+    },
+    {
+      "name": "ND Awards",
+      "awards": "",
+      "deadline": "20210919",
+      "link": "https://ndawards.net/",
+      "tileStyle": "red"
+    },
+    {
+      "name": "The AOP Awards",
+      "awards": "",
+      "deadline": "",
+      "link": "https://www.aopawards.com/",
+      "tileStyle": "black"
+    },
+    {
+      "name": "The APA Awards",
+      "awards": "",
+      "deadline": "",
+      "link": "https://annualphotoawards.com/",
+      "tileStyle": "white"
+    },
+    {
+      "name": "Trierenberg Super Circuit",
+      "awards": "TRIERENBERG SUPER CIRCUIT 2021",
+      "deadline": "20210329",
+      "link": "http://www.supercircuit.at/Home",
+      "tileStyle": "red"
+    },
+    {
+      "name": "WPE International Photographer awards",
+      "awards": "",
+      "deadline": "20210119",
+      "link": "https://www.wpeawards.com/",
+      "tileStyle": "black"
+    },
+    {
+      "name": "WPPI ",
+      "awards": "WPPI's First Half Online competition",
+      "deadline": "",
+      "link": "https://wppiexpo.com/",
+      "tileStyle": "white"
+    },
+    {
+      "name": "WPPI ",
+      "awards": "WPPI's Second Half Online competition",
+      "deadline": "",
+      "link": "https://wppiexpo.com/",
+      "tileStyle": "black"
+    },
+    {
+      "name": "WPPI ",
+      "awards": "The Annual",
+      "deadline": "",
+      "link": "https://wppiexpo.com/",
+      "tileStyle": "white"
+    }
+  ]
 }
