@@ -1,0 +1,68 @@
+.ScrollIndicator {
+  appearance: none;
+  background: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  outline: none;
+
+  bottom: 0;
+  display: inline-block;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  padding-bottom: 136px;
+  font-family: "Yu Mincho", YuMincho, "Hiragino Minchō Pro",
+    "Hiragino Mincho Pro", serif;
+  font-weight: bold;
+
+  &::after {
+    animation: scroll-sign 1.8s cubic-bezier(0.645, 0.045, 0.355, 1) infinite
+      both;
+    background-color: #222;
+    content: "";
+    height: 80px;
+    width: 3px;
+
+    bottom: 0;
+    display: inline-block;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+  }
+
+  span {
+    display: inline-block;
+    font-size: 16px;
+    letter-spacing: 0.4em;
+    transform: rotate(90deg);
+  }
+
+  a {
+    text-decoration: none;
+    color: #222;
+  }
+}
+
+@keyframes scroll-sign {
+  0% {
+    transform: scale3d(1, 1, 1);
+    transform-origin: bottom;
+  }
+
+  50% {
+    transform: scale3d(1, 0, 1);
+    transform-origin: bottom;
+  }
+
+  51% {
+    transform: scale3d(1, 0, 1);
+    transform-origin: top;
+  }
+
+  100% {
+    transform: scale3d(1, 1, 1);
+    transform-origin: top;
+  }
+}
