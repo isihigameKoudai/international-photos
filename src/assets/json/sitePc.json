@@ -22,11 +22,25 @@
       "tileStyle": "white"
     },
     {
+      "name": "BIFA",
+      "awards": "Budapest International Foto Awards",
+      "deadline": "",
+      "link": "https://budapestfotoawards.com/",
+      "tileStyle": "red"
+    },
+    {
       "name": "PX3",
       "awards": "Le Prix de la Photographie de Paris",
       "deadline": "20210131",
       "link": "https://px3.fr/",
       "tileStyle": "black"
+    },
+    {
+      "name": "Rise International Photography Awards",
+      "awards": "",
+      "deadline": "",
+      "link": "https://risephotoawards.com/",
+      "tileStyle": "white"
     },
     {
       "name": "1x",
