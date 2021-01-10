@@ -31,4 +31,8 @@
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 
   padding: 60px 0 30px;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
 }

@@ -8,6 +8,12 @@
   align-items: center;
   background-color: #eee;
   position: relative;
+
+  @media screen and (max-width: 768px) {
+    min-height: auto;
+    padding-block-start: 40px;
+    padding-block-end: 40px;
+  }
 }
 
 .red {
@@ -26,7 +32,8 @@
   margin: 0;
   line-height: 1.5;
   text-align: center;
-  font-family: "Yu Mincho",YuMincho,"Hiragino Minchō Pro","Hiragino Mincho Pro",serif;
+  font-family: "Yu Mincho", YuMincho, "Hiragino Minchō Pro",
+    "Hiragino Mincho Pro", serif;
   -webkit-font-smothing: antialiased;
   color: inherit;
   z-index: 0;
@@ -42,7 +49,7 @@
   align-items: center;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -56,7 +63,7 @@
   }
 
   &.black::before {
-    background-color: #020202
+    background-color: #020202;
   }
 
   &.white::before {
