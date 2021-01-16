@@ -101,7 +101,7 @@
     {
       "name": "OneEyeLand",
       "awards": "OneEyeLand Awards",
-      "deadline": "20210110",
+      "deadline": "20210124",
       "link": "https://oneeyeland.com/awards.php",
       "tileStyle": "black"
     },
@@ -183,25 +183,32 @@
       "tileStyle": "black"
     },
     {
-      "name": "WPPI ",
+      "name": "WPPI",
       "awards": "WPPI's First Half Online competition",
       "deadline": "",
       "link": "https://wppiexpo.com/",
       "tileStyle": "white"
     },
     {
-      "name": "WPPI ",
+      "name": "WPPI",
       "awards": "WPPI's Second Half Online competition",
       "deadline": "",
       "link": "https://wppiexpo.com/",
       "tileStyle": "black"
     },
     {
-      "name": "WPPI ",
+      "name": "WPPI",
       "awards": "The Annual",
       "deadline": "",
       "link": "https://wppiexpo.com/",
       "tileStyle": "white"
+    },
+    {
+      "name": "Asia WPA",
+      "awards": "",
+      "deadline": "",
+      "link": "https://contest.asiawpa.com//index.php",
+      "tileStyle": "red"
     }
   ]
 }
