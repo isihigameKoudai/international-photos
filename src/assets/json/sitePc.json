@@ -17,7 +17,7 @@
     {
       "name": "MIFA",
       "awards": "Moscow International Foto Awards",
-      "deadline": "",
+      "deadline": "20210321",
       "link": "https://www.moscowfotoawards.com/",
       "tileStyle": "white"
     },
@@ -177,8 +177,15 @@
     },
     {
       "name": "WPE International Photographer awards",
-      "awards": "",
-      "deadline": "20210119",
+      "awards": "first half",
+      "deadline": "",
+      "link": "https://www.wpeawards.com/",
+      "tileStyle": "red"
+    },
+    {
+      "name": "WPE International Photographer awards",
+      "awards": "second half",
+      "deadline": "",
       "link": "https://www.wpeawards.com/",
       "tileStyle": "black"
     },
