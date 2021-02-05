@@ -31,7 +31,7 @@
     {
       "name": "PX3",
       "awards": "Le Prix de la Photographie de Paris",
-      "deadline": "20210131",
+      "deadline": "20210228",
       "link": "https://px3.fr/",
       "tileStyle": "black"
     },
@@ -101,7 +101,7 @@
     {
       "name": "OneEyeLand",
       "awards": "OneEyeLand Awards",
-      "deadline": "20210124",
+      "deadline": "20210208",
       "link": "https://oneeyeland.com/awards.php",
       "tileStyle": "black"
     },
@@ -122,7 +122,7 @@
     {
       "name": "Applied Arts Awards",
       "awards": "Applied Arts - Photography",
-      "deadline": "",
+      "deadline": "20210212",
       "link": "https://www.appliedartsmag.com/photography_awards/ ",
       "tileStyle": "red"
     },
