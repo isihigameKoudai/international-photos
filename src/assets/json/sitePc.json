@@ -31,7 +31,7 @@
     {
       "name": "PX3",
       "awards": "Le Prix de la Photographie de Paris",
-      "deadline": "20210228",
+      "deadline": "20210630",
       "link": "https://px3.fr/",
       "tileStyle": "black"
     },
@@ -101,14 +101,14 @@
     {
       "name": "OneEyeLand",
       "awards": "OneEyeLand Awards",
-      "deadline": "20210208",
+      "deadline": "",
       "link": "https://oneeyeland.com/awards.php",
       "tileStyle": "black"
     },
     {
       "name": "Fine Art Photography Awards",
       "awards": "",
-      "deadline": "20210207",
+      "deadline": "",
       "link": "https://fineartphotoawards.com/",
       "tileStyle": "red"
     },
@@ -122,14 +122,14 @@
     {
       "name": "Applied Arts Awards",
       "awards": "Applied Arts - Photography",
-      "deadline": "20210212",
+      "deadline": "",
       "link": "https://www.appliedartsmag.com/photography_awards/ ",
       "tileStyle": "red"
     },
     {
       "name": "communication arts",
       "awards": "CA2021 photography competitions",
-      "deadline": "20210305",
+      "deadline": "",
       "link": "https://www.commarts.com/competition/2021-photography",
       "tileStyle": "white"
     },
