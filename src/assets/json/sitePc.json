@@ -3,14 +3,14 @@
     {
       "name": "IPA",
       "awards": "International Photography Awards",
-      "deadline": "20210314",
+      "deadline": "20210404",
       "link": "https://www.photoawards.com/",
       "tileStyle": "red"
     },
     {
       "name": "TIFA",
       "awards": "Tokyo International Foto Awards",
-      "deadline": "",
+      "deadline": "20211030",
       "link": "https://www.tokyofotoawards.jp/",
       "tileStyle": "white"
     },
@@ -24,7 +24,7 @@
     {
       "name": "BIFA",
       "awards": "Budapest International Foto Awards",
-      "deadline": "",
+      "deadline": "20210501",
       "link": "https://budapestfotoawards.com/",
       "tileStyle": "red"
     },
@@ -185,7 +185,7 @@
     {
       "name": "WPE International Photographer awards",
       "awards": "second half",
-      "deadline": "",
+      "deadline": "20210511",
       "link": "https://www.wpeawards.com/",
       "tileStyle": "black"
     },
