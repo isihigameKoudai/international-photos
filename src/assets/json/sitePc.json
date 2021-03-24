@@ -100,6 +100,13 @@
     },
     {
       "name": "OneEyeLand",
+      "awards": "World’s Top 10 Wild Life Photographers",
+      "deadline": "20290329",
+      "link": "https://oneeyeland.com/top-10/photo-contest/wildlife/",
+      "tileStyle": "white"
+    },
+    {
+      "name": "OneEyeLand",
       "awards": "OneEyeLand Awards",
       "deadline": "",
       "link": "https://oneeyeland.com/awards.php",
