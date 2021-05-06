@@ -10,6 +10,7 @@
     "dev:export": "cd ./out && python -m SimpleHTTPServer 8000"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "next": "10.0.0",
     "next-pwa": "^3.1.5",
     "react": "17.0.1",

@@ -1,21 +1,22 @@
-const path = require('path');
-const withPWA = require('next-pwa')
-const runtimeCaching = require('next-pwa/cache')
+const path = require("path");
+const withPWA = require("next-pwa");
+const runtimeCaching = require("next-pwa/cache");
 
-const srcDir = './src';
+const srcDir = "./src";
 const serverless = process.env.SERVELESS;
-const configServerless = serverless ? { target: serverless} : {};
+const configServerless = serverless ? { target: serverless } : {};
 
 module.exports = withPWA({
   dir: srcDir,
   configServerless,
   pwa: {
-    disable: process.env.NODE_ENV === 'development',
-    dest: 'public',
+    disable: process.env.NODE_ENV === "development",
+    dest: "public",
     runtimeCaching,
   },
   env: {
-    GOOGLE_ANALYTICS_ID: process.env.GOOGLE_ANALYTICS_ID
+    GOOGLE_ANALYTICS_ID: process.env.GOOGLE_ANALYTICS_ID,
+    BASE_URL: process.env.BASE_URL,
   },
   webpack(config) {
     config.resolve.alias["@"] = path.resolve(__dirname, srcDir);
@@ -23,11 +24,11 @@ module.exports = withPWA({
       test: /\.(woff|woff2|eot|ttf|otf|jpeg|jpg|png)$/,
       use: [
         {
-          loader: 'url-loader',
+          loader: "url-loader",
           options: {},
         },
       ],
-    })
+    });
     return config;
-  }
-})
+  },
+});
