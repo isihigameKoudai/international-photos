@@ -1,6 +1,7 @@
 import * as React from "react";
 import { NextPage, GetStaticProps } from "next";
 import clone from "rfdc";
+import { AxiosResponse } from "axios";
 
 import style from "@/assets/style/layout.module.scss";
 import indexStyle from "@/assets/style/indexPage.module.scss";
@@ -11,6 +12,7 @@ import SectionTitle from "@/components/SectionTitle";
 import ScrollIndicator from "@/components/ScrollIndicator";
 
 import { fetchCompetitions, CompetitionResponse } from '@/service/api/competitions'
+
 
 const IndexPage: NextPage<any> = (props) => {
   const { sitePc } = props;
@@ -156,7 +158,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   const { data } = await fetchCompetitions().catch(e => {
     console.log(e);
-  })
+  }) as AxiosResponse<CompetitionResponse>
 
   const deepCopy = clone();
   const splicedSitePc: TList[] = deepCopy(data.contents);
