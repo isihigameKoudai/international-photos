@@ -9,10 +9,12 @@ import Tile from "@/components/Tile";
 import ImageBox from "@/components/ImageBox";
 import SectionTitle from "@/components/SectionTitle";
 import ScrollIndicator from "@/components/ScrollIndicator";
-import sitePc from "@/assets/json/sitePc.json";
+
+import { fetchCompetitions, CompetitionResponse } from '@/service/api/competitions'
 
 const IndexPage: NextPage<any> = (props) => {
   const { sitePc } = props;
+
   const onClickScroll = () => {
     const $top = document.querySelector(".top");
     const { height } = $top.getBoundingClientRect();
@@ -43,10 +45,12 @@ const IndexPage: NextPage<any> = (props) => {
       <main className={style.container} style={{ marginTop: 52 }}>
         <SectionTitle title="Competitions" />
         <div className={style.top}>
-          {sitePc.map((item, index) => {
-            if (item.deadline !== undefined)
-              return (
-                <Tile
+          {
+            sitePc.map((item, index) => {
+
+              if(item.src) return <ImageBox key={index} src={item.src} name={item.name} />;
+
+              return <Tile
                   key={index}
                   name={item.name}
                   awards={item.awards}
@@ -54,10 +58,8 @@ const IndexPage: NextPage<any> = (props) => {
                   link={item.link}
                   tileStyle={item.tileStyle}
                 />
-              );
-
-            return <ImageBox key={index} src={item.src} name={item.name} />;
-          })}
+            })
+          }
         </div>
       </main>
       <footer
@@ -69,7 +71,7 @@ const IndexPage: NextPage<any> = (props) => {
           <a
             href="//twitter.com/share"
             className="twitter-share-button item"
-            data-text="海外の国際的な写真コンテストの締め切りがまとめて見れるInternational-photos  "
+            data-text="海外の国際的な写真コンテストの締め切りがまとめて見れるInternational-photos"
             data-url="https://international-photos.vercel.app/"
             data-lang="ja"
           >
@@ -143,23 +145,21 @@ const IndexPage: NextPage<any> = (props) => {
   );
 };
 
-const deepCopy = clone();
-type TSite = {
-  name: string;
-  award: string;
-  deadline: string;
-  tileStyle: "red" | "black" | "white";
-};
-
 type TImage = {
   src: string;
   name: string;
 };
 
-type TList = TSite | TImage;
+type TList = CompetitionResponse | TImage;
 
 export const getStaticProps: GetStaticProps = async () => {
-  const splicedSitePc: TList[] = deepCopy(sitePc.sites);
+
+  const { data } = await fetchCompetitions().catch(e => {
+    console.log(e);
+  })
+
+  const deepCopy = clone();
+  const splicedSitePc: TList[] = deepCopy(data.contents);
   const imageList: TImage[] = [
     {
       src: "/image1.jpg",
