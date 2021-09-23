@@ -173,33 +173,6 @@ export const getStaticProps: GetStaticProps = async () => {
 
   const deepCopy = clone();
   const splicedSitePc: TList[] = deepCopy(data.contents);
-  const imageList: TImage[] = [
-    {
-      src: "/image1.jpg",
-      name: "image1",
-    },
-    {
-      src: "/image2.jpeg",
-      name: "image2",
-    },
-    {
-      src: "/image3.jpeg",
-      name: "image3",
-    },
-    {
-      src: "/image4.JPG",
-      name: "image4",
-    },
-    {
-      src: "/image5.JPG",
-      name: "image5",
-    },
-  ];
-
-  const arr: number[] = [1, 8, 12, 20, 25];
-  arr.map((num, i) => {
-    splicedSitePc.splice(num, 0, imageList[i]);
-  });
 
   const props: PageProps = { siteList: splicedSitePc };
   return { props };
