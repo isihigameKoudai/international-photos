@@ -11,7 +11,7 @@ export type Competition = {
   awards: string;
   deadline: string;
   link: string;
-  tileStyle: string;
+  tileStyle: "red" | "black" | "white" | null | undefined;
 };
 
 export type CompetitionResponse = {

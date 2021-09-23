@@ -2,6 +2,7 @@ import * as React from "react";
 import { NextPage, GetStaticProps } from "next";
 import clone from "rfdc";
 import { AxiosResponse } from "axios";
+import { fetchToday } from "@/utils/date";
 
 import style from "@/assets/style/layout.module.scss";
 import indexStyle from "@/assets/style/indexPage.module.scss";
@@ -11,11 +12,21 @@ import ImageBox from "@/components/ImageBox";
 import SectionTitle from "@/components/SectionTitle";
 import ScrollIndicator from "@/components/ScrollIndicator";
 
-import { fetchCompetitions, CompetitionResponse } from '@/service/api/competitions'
+import { fetchCompetitions, CompetitionResponse, Competition } from '@/service/api/competitions'
 
+type TImage = {
+  src: string;
+  name: string;
+};
 
-const IndexPage: NextPage<any> = (props) => {
-  const { sitePc } = props;
+type TList = Competition & TImage;
+
+type PageProps = {
+  siteList: TList[]
+}
+
+const IndexPage: NextPage<PageProps> = (props) => {
+  const { siteList } = props;
 
   const onClickScroll = () => {
     const $top = document.querySelector(".top");
@@ -26,6 +37,9 @@ const IndexPage: NextPage<any> = (props) => {
       behavior: "smooth",
     });
   };
+  const today: string = fetchToday()
+  console.log(today);
+  const isPastWith = (deadline: string): boolean => today > deadline
 
   return (
     <div id="top">
@@ -48,15 +62,18 @@ const IndexPage: NextPage<any> = (props) => {
         <SectionTitle title="Competitions" />
         <div className={style.top}>
           {
-            sitePc.map((item, index) => {
+            siteList.map((item: TList, index) => {
 
               if(item.src) return <ImageBox key={index} src={item.src} name={item.name} />;
+
+              const isPast: boolean = isPastWith(item.deadline)
+              const hasDeadline: boolean = item.deadline?.length < 8
 
               return <Tile
                   key={index}
                   name={item.name}
                   awards={item.awards}
-                  deadline={item.deadline}
+                  deadline={ isPast && !hasDeadline ? 'Will be coming!' : item.deadline}
                   link={item.link}
                   tileStyle={item.tileStyle}
                 />
@@ -147,12 +164,6 @@ const IndexPage: NextPage<any> = (props) => {
   );
 };
 
-type TImage = {
-  src: string;
-  name: string;
-};
-
-type TList = CompetitionResponse | TImage;
 
 export const getStaticProps: GetStaticProps = async () => {
 
@@ -190,7 +201,7 @@ export const getStaticProps: GetStaticProps = async () => {
     splicedSitePc.splice(num, 0, imageList[i]);
   });
 
-  const props: object = { sitePc: splicedSitePc };
+  const props: PageProps = { siteList: splicedSitePc };
   return { props };
 };
 
