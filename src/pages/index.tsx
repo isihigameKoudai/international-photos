@@ -38,8 +38,11 @@ const IndexPage: NextPage<PageProps> = (props) => {
     });
   };
   const today: string = fetchToday()
-  console.log(today);
-  const isPastWith = (deadline: string): boolean => today > deadline
+  const isShowEmptyMessage = (deadline: string | null | undefined ): boolean => {
+    const isEmpty = !deadline
+    const isPast = today > deadline
+    return  isEmpty || isPast
+  }
 
   return (
     <div id="top">
@@ -66,14 +69,11 @@ const IndexPage: NextPage<PageProps> = (props) => {
 
               if(item.src) return <ImageBox key={index} src={item.src} name={item.name} />;
 
-              const isPast: boolean = isPastWith(item.deadline)
-              const hasDeadline: boolean = item.deadline?.length < 8
-
               return <Tile
                   key={index}
                   name={item.name}
                   awards={item.awards}
-                  deadline={ isPast && !hasDeadline ? 'Will be coming!' : item.deadline}
+                  deadline={ isShowEmptyMessage(item.deadline) ? 'Will be coming!' : item.deadline}
                   link={item.link}
                   tileStyle={item.tileStyle}
                 />
