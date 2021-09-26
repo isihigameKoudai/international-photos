@@ -2,6 +2,7 @@ import * as React from "react";
 import { NextPage, GetStaticProps } from "next";
 import clone from "rfdc";
 import { AxiosResponse } from "axios";
+import { fetchToday } from "@/utils/date";
 
 import style from "@/assets/style/layout.module.scss";
 import indexStyle from "@/assets/style/indexPage.module.scss";
@@ -11,11 +12,21 @@ import ImageBox from "@/components/ImageBox";
 import SectionTitle from "@/components/SectionTitle";
 import ScrollIndicator from "@/components/ScrollIndicator";
 
-import { fetchCompetitions, CompetitionResponse } from '@/service/api/competitions'
+import { fetchCompetitions, CompetitionResponse, Competition } from '@/service/api/competitions'
 
+type TImage = {
+  src: string;
+  name: string;
+};
 
-const IndexPage: NextPage<any> = (props) => {
-  const { sitePc } = props;
+type TList = Competition & TImage;
+
+type PageProps = {
+  siteList: TList[]
+}
+
+const IndexPage: NextPage<PageProps> = (props) => {
+  const { siteList } = props;
 
   const onClickScroll = () => {
     const $top = document.querySelector(".top");
@@ -26,6 +37,12 @@ const IndexPage: NextPage<any> = (props) => {
       behavior: "smooth",
     });
   };
+  const today: string = fetchToday()
+  const isShowEmptyMessage = (deadline: string | null | undefined ): boolean => {
+    const isEmpty = !deadline
+    const isPast = today > deadline
+    return  isEmpty || isPast
+  }
 
   return (
     <div id="top">
@@ -48,7 +65,7 @@ const IndexPage: NextPage<any> = (props) => {
         <SectionTitle title="Competitions" />
         <div className={style.top}>
           {
-            sitePc.map((item, index) => {
+            siteList.map((item: TList, index) => {
 
               if(item.src) return <ImageBox key={index} src={item.src} name={item.name} />;
 
@@ -56,7 +73,7 @@ const IndexPage: NextPage<any> = (props) => {
                   key={index}
                   name={item.name}
                   awards={item.awards}
-                  deadline={item.deadline}
+                  deadline={ isShowEmptyMessage(item.deadline) ? 'Will be coming!' : item.deadline}
                   link={item.link}
                   tileStyle={item.tileStyle}
                 />
@@ -147,12 +164,6 @@ const IndexPage: NextPage<any> = (props) => {
   );
 };
 
-type TImage = {
-  src: string;
-  name: string;
-};
-
-type TList = CompetitionResponse | TImage;
 
 export const getStaticProps: GetStaticProps = async () => {
 
@@ -162,35 +173,8 @@ export const getStaticProps: GetStaticProps = async () => {
 
   const deepCopy = clone();
   const splicedSitePc: TList[] = deepCopy(data.contents);
-  const imageList: TImage[] = [
-    {
-      src: "/image1.jpg",
-      name: "image1",
-    },
-    {
-      src: "/image2.jpeg",
-      name: "image2",
-    },
-    {
-      src: "/image3.jpeg",
-      name: "image3",
-    },
-    {
-      src: "/image4.JPG",
-      name: "image4",
-    },
-    {
-      src: "/image5.JPG",
-      name: "image5",
-    },
-  ];
 
-  const arr: number[] = [1, 8, 12, 20, 25];
-  arr.map((num, i) => {
-    splicedSitePc.splice(num, 0, imageList[i]);
-  });
-
-  const props: object = { sitePc: splicedSitePc };
+  const props: PageProps = { siteList: splicedSitePc };
   return { props };
 };
 
