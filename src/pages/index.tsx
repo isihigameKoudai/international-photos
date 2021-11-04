@@ -8,21 +8,13 @@ import style from "@/assets/style/layout.module.scss";
 import indexStyle from "@/assets/style/indexPage.module.scss";
 
 import Tile from "@/components/Tile";
-import ImageBox from "@/components/ImageBox";
 import SectionTitle from "@/components/SectionTitle";
 import ScrollIndicator from "@/components/ScrollIndicator";
 
 import { fetchCompetitions, CompetitionResponse, Competition } from '@/service/api/competitions'
 
-type TImage = {
-  src: string;
-  name: string;
-};
-
-type TList = Competition & TImage;
-
 type PageProps = {
-  siteList: TList[]
+  siteList: Competition[]
 }
 
 const IndexPage: NextPage<PageProps> = (props) => {
@@ -65,19 +57,16 @@ const IndexPage: NextPage<PageProps> = (props) => {
         <SectionTitle title="Competitions" />
         <div className={style.top}>
           {
-            siteList.map((item: TList, index) => {
-
-              if(item.src) return <ImageBox key={index} src={item.src} name={item.name} />;
-
-              return <Tile
-                  key={index}
-                  name={item.name}
-                  awards={item.awards}
-                  deadline={ isShowEmptyMessage(item.deadline) ? 'Will be coming!' : item.deadline}
-                  link={item.link}
-                  tileStyle={item.tileStyle}
-                />
-            })
+            siteList.map((item: Competition, index) => (
+              <Tile
+                key={index}
+                name={item.name}
+                awards={item.awards}
+                deadline={ isShowEmptyMessage(item.deadline) ? 'Will be coming!' : item.deadline}
+                link={item.link}
+                tileStyle={item.tileStyle}
+              />
+            ))
           }
         </div>
       </main>
@@ -172,7 +161,7 @@ export const getStaticProps: GetStaticProps = async () => {
   }) as AxiosResponse<CompetitionResponse>
 
   const deepCopy = clone();
-  const splicedSitePc: TList[] = deepCopy(data.contents);
+  const splicedSitePc: Competition[] = deepCopy(data.contents);
 
   const props: PageProps = { siteList: splicedSitePc };
   return { props };
