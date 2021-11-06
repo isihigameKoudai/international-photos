@@ -103,7 +103,7 @@ const IndexPage: NextPage<PageProps> = (props) => {
             <ListContainer>
               {
                 competitions.map((item: Competition, i) => (
-                  <ListItem competition={item} />
+                  <ListItem key={`list-${index}`} competition={item} />
                 ))
               }
             </ListContainer>
@@ -116,7 +116,7 @@ const IndexPage: NextPage<PageProps> = (props) => {
               {
                 siteList.map((item: Competition, index) => (
                   <Tile
-                    key={index}
+                    key={`tile-${index}`}
                     name={item.name}
                     awards={item.awards}
                     deadline={ item.deadline }
