@@ -32,7 +32,7 @@ const IndexPage: NextPage<PageProps> = (props) => {
   const { siteList } = props;
   const [showMode, setShowMode] = useState<ShowMode>('list')
 
-  const onChangeShowMode = useCallback((event: MouseEvent<HTMLElement, MouseEvent>, mode: ShowMode) => {
+  const onChangeShowMode = useCallback((event, mode) => {
     setShowMode(mode)
   },[])
 
@@ -103,7 +103,7 @@ const IndexPage: NextPage<PageProps> = (props) => {
             <ListContainer>
               {
                 competitions.map((item: Competition, i) => (
-                  <ListItem key={`list-${index}`} competition={item} />
+                  <ListItem key={`list-${i}`} competition={item} />
                 ))
               }
             </ListContainer>
