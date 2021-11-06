@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useMemo } from 'react';
 import { NextPage, GetStaticProps } from "next";
 import clone from "rfdc";
 import { AxiosResponse } from "axios";
@@ -10,6 +11,9 @@ import indexStyle from "@/assets/style/indexPage.module.scss";
 import Tile from "@/components/Tile";
 import SectionTitle from "@/components/SectionTitle";
 import ScrollIndicator from "@/components/ScrollIndicator";
+import ListContainer from "~/components/ListContainer";
+import ListHeader from "~/components/ListHeader";
+import ListItem from '@/components/ListItem'
 
 import { fetchCompetitions, CompetitionResponse, Competition } from '@/service/api/competitions'
 
@@ -36,6 +40,11 @@ const IndexPage: NextPage<PageProps> = (props) => {
     return  isEmpty || isPast
   }
 
+  const competitions = siteList.map(competition => {
+    competition.deadline = isShowEmptyMessage(competition.deadline) ? 'Will be coming!' : competition.deadline
+    return competition
+  })
+
   return (
     <div id="top">
       <div className={`${indexStyle.hero} top`}>
@@ -55,6 +64,14 @@ const IndexPage: NextPage<PageProps> = (props) => {
 
       <main className={style.container} style={{ marginTop: 52 }}>
         <SectionTitle title="Competitions" />
+        <ListHeader className={indexStyle.ListHeader} />
+        <ListContainer>
+          {
+            competitions.map((item: Competition, i) => (
+              <ListItem competition={item} />
+            ))
+          }
+        </ListContainer>
         <div className={style.top}>
           {
             siteList.map((item: Competition, index) => (
@@ -62,7 +79,7 @@ const IndexPage: NextPage<PageProps> = (props) => {
                 key={index}
                 name={item.name}
                 awards={item.awards}
-                deadline={ isShowEmptyMessage(item.deadline) ? 'Will be coming!' : item.deadline}
+                deadline={ item.deadline }
                 link={item.link}
                 tileStyle={item.tileStyle}
               />
