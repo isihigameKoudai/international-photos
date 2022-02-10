@@ -22,6 +22,7 @@ export type Props = {
 }
 
 type ShowMode = 'list' | 'tile';
+const MONTH_LINE = 30 as const;
 
 const Index = memo<Props>(({ siteList }) => {
 
@@ -49,7 +50,7 @@ const Index = memo<Props>(({ siteList }) => {
   const competitions = siteList.map(competition => {
     competition.deadline = isShowEmptyMessage(competition.deadline) ? 'Will be coming!' : competition.deadline
     return competition
-  })
+  });
 
   return (
     <div id="top">
@@ -69,6 +70,7 @@ const Index = memo<Props>(({ siteList }) => {
       </div>
 
       <main className={style.container} style={{ marginTop: 52 }}>
+        {/* <SectionTitle title="Nearing the deadline" /> */}
         <SectionTitle title="Competitions" />
         <Grid
           className={indexStyle.ToggleContainer}

@@ -2,7 +2,7 @@ import * as React from 'react';
 import { memo } from 'react';
 import Grid from '@material-ui/core/Grid';
 
-import { Competition } from '~/service/api/competitions';
+import { Competition } from '@/model/competition';
 import { ListItemStyle } from './style';
 
 type Props = {
