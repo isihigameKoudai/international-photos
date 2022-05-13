@@ -22,7 +22,6 @@ export type Props = {
 }
 
 type ShowMode = 'list' | 'tile';
-const MONTH_LINE = 30 as const;
 
 const Index = memo<Props>(({ siteList }) => {
 
@@ -175,7 +174,7 @@ const Index = memo<Props>(({ siteList }) => {
             fontFamily: `"Yu Mincho", YuMincho, "Hiragino Minchō Pro", "Hiragino Mincho Pro", serif`,
           }}
         >
-          © 2020~2021 Bright and dizain
+          © 2020~2022 Bright and dizain
         </div>
       </footer>
     </div>
