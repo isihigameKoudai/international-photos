@@ -1,6 +1,5 @@
 import * as React from "react";
 import { NextPage, GetStaticProps } from "next";
-import clone from "rfdc";
 import { AxiosResponse } from "axios";
 
 import Index, { Props }from '@/components/pages/Index';
@@ -18,8 +17,7 @@ export const getStaticProps: GetStaticProps = async () => {
     console.log(e);
   }) as AxiosResponse<CompetitionResponse>
 
-  const deepCopy = clone();
-  const splicedSitePc: Competition[] = deepCopy(data.contents);
+  const splicedSitePc: Competition[] = data.contents;
 
   const props: Props = { siteList: splicedSitePc };
   return { props };
