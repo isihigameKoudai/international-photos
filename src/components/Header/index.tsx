@@ -15,7 +15,7 @@ const Header: React.FC = () => {
   return (
     <header className={headerStyle}>
       <div className={style.container}>
-        <Image src={TitleBanner.src} width={TitleBanner.width} height={TitleBanner.height} />
+        <Image src={TitleBanner.src} width={TitleBanner.width} height={TitleBanner.height} loading='lazy' decoding="async" />
       </div>
     </header>
     )
