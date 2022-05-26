@@ -1,73 +1,41 @@
 import * as React from 'react';
 import { useState, useCallback, memo } from 'react';
+import Image from 'next/image';
 import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
 import ArticleIcon from '@mui/icons-material/Article';
 import Grid from '@material-ui/core/Grid';
 
-import { fetchToday } from "@/utils/date";
-import { Competition } from '@/model/competition';
+
+import Competition, { CompetitionProps } from '@/model/competition';
 
 import SectionTitle from "@/components/SectionTitle";
-import ScrollIndicator from "@/components/ScrollIndicator";
-import ListView from '../ListView';
-import TileView from '../TileView';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import ListView from '../../ListView';
+import TileView from '../../TileView';
 
 import indexStyle from "@/assets/style/indexPage.module.scss";
 import style from '@/assets/style/layout.module.scss';
 
 export type Props = {
-  siteList: Competition[];
+  competitionList: CompetitionProps[];
 }
 
 type ShowMode = 'list' | 'tile';
 
-const Index = memo<Props>(({ siteList }) => {
-
+const Index = memo<Props>(({ competitionList }) => {
   const [showMode, setShowMode] = useState<ShowMode>('list')
   const onChangeShowMode = useCallback((event, mode) => {
     setShowMode(mode)
   },[])
 
-  const onClickScroll = () => {
-    const $top = document.querySelector(".top");
-    const { height } = $top.getBoundingClientRect();
-
-    window.scroll({
-      top: height,
-      behavior: "smooth",
-    });
-  };
-  const today: string = fetchToday()
-  const isShowEmptyMessage = (deadline: string | null | undefined ): boolean => {
-    const isEmpty = !deadline
-    const isPast = today > deadline
-    return  isEmpty || isPast
-  }
-
-  const competitions = siteList.map(competition => {
-    competition.deadline = isShowEmptyMessage(competition.deadline) ? 'Will be coming!' : competition.deadline
-    return competition
-  });
+  const competitions = competitionList.map(competition => new Competition(competition));
 
   return (
     <div id="top">
-      <div className={`${indexStyle.hero} top`}>
-        <div
-          className={`${style.container}`}
-          style={{
-            height: "100%",
-            display: "flex",
-            justifyContent: "flex-start",
-            alignItems: "center",
-          }}
-        >
-          <img src="/title.png" alt="tile" width="350" />
-        </div>
-        <ScrollIndicator onClickScroll={onClickScroll} />
-      </div>
-
+      <Header />
       <main className={style.container} style={{ marginTop: 52 }}>
         {/* <SectionTitle title="Nearing the deadline" /> */}
         <SectionTitle title="Competitions" />
@@ -98,7 +66,7 @@ const Index = memo<Props>(({ siteList }) => {
           showMode === 'tile' && <TileView competitions={competitions} />
         }
       </main>
-      <footer
+      <div
         className={`${style.container}`}
         style={{ padding: "60px 0 30px" }}
       >
@@ -167,16 +135,8 @@ const Index = memo<Props>(({ siteList }) => {
             />
           </a>
         </div>
-        <div
-          style={{
-            textAlign: "center",
-            padding: "10px 0",
-            fontFamily: `"Yu Mincho", YuMincho, "Hiragino Minchō Pro", "Hiragino Mincho Pro", serif`,
-          }}
-        >
-          © 2020~2022 Bright and dizain
-        </div>
-      </footer>
+      </div>
+      <Footer />
     </div>
   )
 });
