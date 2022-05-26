@@ -11,6 +11,10 @@ export const ListItemStyle = css`
     "Hiragino Mincho Pro", serif;
   border-bottom: solid 1px #ccc;
 
+  p {
+    margin: 0;
+  }
+
   &:nth-child(even) {
     background: #fafafc;
   }

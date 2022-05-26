@@ -1,4 +1,7 @@
-import { fetchToday } from "@/utils/date";
+import { differenceInDays, format, isFuture } from "date-fns";
+import { divideDate } from "@/utils/date";
+
+const CLOSING_LIMIT_DAY_LENGTH = 20;
 
 type Title = "red" | "black" | "white";
 
@@ -15,8 +18,6 @@ export type CompetitionProps = {
   tileStyle: Title;
 };
 
-const today = fetchToday();
-
 export default class Competition {
   id: string;
   createdAt: Date;
@@ -25,7 +26,7 @@ export default class Competition {
   revisedAt: Date;
   name: string;
   awards: string;
-  deadline: string;
+  deadline: Date | null;
   link: string;
   tileStyle: Title;
 
@@ -34,21 +35,35 @@ export default class Competition {
     updatedAt,
     publishedAt,
     revisedAt,
+    deadline,
     ...props
   }: CompetitionProps) {
+    Object.assign(this, props);
     this.createdAt = new Date(createdAt);
     this.updatedAt = new Date(updatedAt);
     this.publishedAt = new Date(publishedAt);
     this.revisedAt = new Date(revisedAt);
-    Object.assign(this, props);
+
+    if (!deadline) {
+      this.deadline = null;
+    } else {
+      const { year, month, day } = divideDate(deadline);
+      this.deadline = new Date(year, month, day);
+    }
   }
 
   get isOpen() {
     const hasDeadline: boolean = !!this.deadline;
-    return today <= this.deadline && hasDeadline;
+    const isFutureDeadline: boolean = isFuture(this.deadline);
+    return isFutureDeadline && hasDeadline;
+  }
+
+  get willCloseSoon() {
+    const differenceDays = differenceInDays(this.deadline, new Date());
+    return 0 < differenceDays && differenceDays < CLOSING_LIMIT_DAY_LENGTH;
   }
 
   get deadlineLabel() {
-    return this.isOpen ? this.deadline : "Will be coming!";
+    return this.isOpen ? format(this.deadline, "yyyyMMdd") : "Will be coming!";
   }
 }

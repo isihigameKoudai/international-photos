@@ -1,20 +1,17 @@
 import * as React from 'react';
-import { useState, useCallback, memo } from 'react';
-import Image from 'next/image';
+import { useState, useCallback, memo, useMemo } from 'react';
 import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
 import ArticleIcon from '@mui/icons-material/Article';
 import Grid from '@material-ui/core/Grid';
 
-
 import Competition, { CompetitionProps } from '@/model/competition';
-
 import SectionTitle from "@/components/SectionTitle";
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import ListView from '../../ListView';
-import TileView from '../../TileView';
+import ListView from '@/components/ListView';
+import TileView from '@/components/TileView';
 
 import indexStyle from "@/assets/style/indexPage.module.scss";
 import style from '@/assets/style/layout.module.scss';
@@ -32,12 +29,16 @@ const Index = memo<Props>(({ competitionList }) => {
   },[])
 
   const competitions = competitionList.map(competition => new Competition(competition));
+  const willClosingSoonCompetition = useMemo(() => competitions.filter(competition => competition.willCloseSoon),[]);
 
   return (
     <div id="top">
       <Header />
       <main className={style.container} style={{ marginTop: 52 }}>
-        {/* <SectionTitle title="Nearing the deadline" /> */}
+        <SectionTitle title="Closing Soon" />
+        <div>
+          <ListView competitions={willClosingSoonCompetition} />
+        </div>
         <SectionTitle title="Competitions" />
         <Grid
           className={indexStyle.ToggleContainer}
