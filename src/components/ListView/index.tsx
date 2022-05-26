@@ -9,15 +9,16 @@ import ListItem from '~/components/ListView/ListItem';;
 
 type Props = {
   competitions: Competition[];
+  className?: string;
 }
 
 const style = css`
   padding: 24px 0;
 `;
 
-const ListView = memo<Props>(({ competitions }) => {
+const ListView = memo<Props>(({ competitions, className = '' }) => {
   return (
-    <div className={style}>
+    <div className={`${style} ${className}`}>
       <ListHeader />
       <ListContainer>
         {
