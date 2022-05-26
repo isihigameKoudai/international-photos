@@ -6,7 +6,7 @@ import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
 import ArticleIcon from '@mui/icons-material/Article';
 import Grid from '@material-ui/core/Grid';
 
-import { fetchToday } from "@/utils/date";
+
 import Competition, { CompetitionProps } from '@/model/competition';
 
 import SectionTitle from "@/components/SectionTitle";
@@ -28,17 +28,7 @@ const Index = memo<Props>(({ competitionList }) => {
     setShowMode(mode)
   },[])
 
-  const today: string = fetchToday()
-  const isShowEmptyMessage = (deadline: string | null | undefined ): boolean => {
-    const isEmpty = !deadline
-    const isPast = today > deadline
-    return  isEmpty || isPast
-  }
-
-  const competitions = competitionList.map(competition => {
-    competition.deadline = isShowEmptyMessage(competition.deadline) ? 'Will be coming!' : competition.deadline
-    return competition
-  });
+  const competitions = competitionList.map(competition => new Competition(competition));
 
   return (
     <div id="top">

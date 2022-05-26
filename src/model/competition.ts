@@ -1,3 +1,5 @@
+import { fetchToday } from "@/utils/date";
+
 type Title = "red" | "black" | "white";
 
 export type CompetitionProps = {
@@ -12,6 +14,8 @@ export type CompetitionProps = {
   link: string;
   tileStyle: Title;
 };
+
+const today = fetchToday();
 
 export default class Competition {
   id: string;
@@ -37,5 +41,14 @@ export default class Competition {
     this.publishedAt = new Date(publishedAt);
     this.revisedAt = new Date(revisedAt);
     Object.assign(this, props);
+  }
+
+  get isOpen() {
+    const hasDeadline: boolean = !!this.deadline;
+    return today > this.deadline && hasDeadline;
+  }
+
+  get deadlineLabel() {
+    return this.isOpen ? this.deadline : "Will be coming!";
   }
 }

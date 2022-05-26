@@ -3,7 +3,7 @@ import { memo } from 'react';
 
 import Tile from './Tile';
 
-import { Competition } from '@/model/competition';
+import Competition from '@/model/competition';
 import style from "@/assets/style/layout.module.scss";
 
 type Props = {
@@ -15,12 +15,8 @@ const TileView = memo<Props>(({ competitions }) => (
     {
       competitions.map((item, index) => (
         <Tile
+          competition={item}
           key={`tile-${index}`}
-          name={item.name}
-          awards={item.awards}
-          deadline={ item.deadline }
-          link={item.link}
-          tileStyle={item.tileStyle}
         />
       ))
     }

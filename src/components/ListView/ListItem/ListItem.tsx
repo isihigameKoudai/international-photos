@@ -2,7 +2,7 @@ import * as React from 'react';
 import { memo } from 'react';
 import Grid from '@material-ui/core/Grid';
 
-import { Competition } from '@/model/competition';
+import Competition from '@/model/competition';
 import { ListItemStyle } from './style';
 
 type Props = {
@@ -22,7 +22,7 @@ const ListItem = memo<Props>(({ className = '', competition }) => (
       >
         <Grid className="name" item xs={4}>{ competition.name }</Grid>
         <Grid className="awards" item xs={4}>{ competition.awards }</Grid>
-        <Grid className={`deadline ${ competition.deadline !== 'Will be coming!' && 'has-deadline' }`} item xs={4}>{ competition.deadline }</Grid>
+        <Grid className={`deadline ${ competition.isOpen && 'has-deadline' }`} item xs={4}>{ competition.deadlineLabel }</Grid>
       </Grid>
     </a>
   </li>

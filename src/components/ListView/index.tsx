@@ -5,7 +5,7 @@ import ListContainer from "~/components/ListView/ListContainer";
 import ListHeader from "~/components/ListView/ListHeader";
 import ListItem from '~/components/ListView/ListItem';
 
-import { Competition } from '@/model/competition';
+import Competition from '@/model/competition';
 import indexStyle from "@/assets/style/indexPage.module.scss";
 
 type Props = {
