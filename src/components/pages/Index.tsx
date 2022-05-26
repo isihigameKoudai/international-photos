@@ -7,7 +7,7 @@ import ArticleIcon from '@mui/icons-material/Article';
 import Grid from '@material-ui/core/Grid';
 
 import { fetchToday } from "@/utils/date";
-import { Competition } from '@/model/competition';
+import Competition, { CompetitionProps } from '@/model/competition';
 
 import SectionTitle from "@/components/SectionTitle";
 import ListView from '../ListView';
@@ -17,13 +17,12 @@ import indexStyle from "@/assets/style/indexPage.module.scss";
 import style from '@/assets/style/layout.module.scss';
 
 export type Props = {
-  siteList: Competition[];
+  competitionList: CompetitionProps[];
 }
 
 type ShowMode = 'list' | 'tile';
 
-const Index = memo<Props>(({ siteList }) => {
-
+const Index = memo<Props>(({ competitionList }) => {
   const [showMode, setShowMode] = useState<ShowMode>('list')
   const onChangeShowMode = useCallback((event, mode) => {
     setShowMode(mode)
@@ -36,7 +35,7 @@ const Index = memo<Props>(({ siteList }) => {
     return  isEmpty || isPast
   }
 
-  const competitions = siteList.map(competition => {
+  const competitions = competitionList.map(competition => {
     competition.deadline = isShowEmptyMessage(competition.deadline) ? 'Will be coming!' : competition.deadline
     return competition
   });

@@ -1,9 +1,9 @@
 import { AxiosPromise } from "axios";
 import { api } from "@/utils/api";
-import { Competition } from "@/model/competition";
+import { CompetitionProps } from "@/model/competition";
 
 export type CompetitionResponse = {
-  contents: Competition[];
+  contents: CompetitionProps[];
 };
 
 export const fetchCompetitions = (): AxiosPromise<CompetitionResponse> =>
