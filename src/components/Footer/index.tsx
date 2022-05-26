@@ -1,7 +1,7 @@
 import React from "react";
 import { css } from "@emotion/css";
 
-import style from '@/assets/style/layout.module.scss';
+import LayoutContainer from "@/components/LayoutContainer";
 
 const footerStyle = css`
   background-color: #010101;
@@ -13,9 +13,9 @@ const footerStyle = css`
 
 const Header: React.FC = () => (
   <footer className={footerStyle}>
-    <div className={style.container}>
+    <LayoutContainer>
       © 2020~2022 Bright and dizain
-    </div>
+    </LayoutContainer>
   </footer>
 );
 

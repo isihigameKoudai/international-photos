@@ -1,21 +1,25 @@
 import * as React from 'react';
 import { memo } from 'react';
+import { css } from '@emotion/css';
 
+import Competition from '@/model/competition'
 import ListContainer from "~/components/ListView/ListContainer";
 import ListHeader from "~/components/ListView/ListHeader";
-import ListItem from '~/components/ListView/ListItem';
-
-import Competition from '@/model/competition';
-import indexStyle from "@/assets/style/indexPage.module.scss";
+import ListItem from '~/components/ListView/ListItem';;
 
 type Props = {
   competitions: Competition[];
+  className?: string;
 }
 
-const ListView = memo<Props>(({ competitions }) => {
+const style = css`
+  padding: 24px 0;
+`;
+
+const ListView = memo<Props>(({ competitions, className = '' }) => {
   return (
-    <div className='list-view'>
-      <ListHeader className={indexStyle.ListHeader} />
+    <div className={`${style} ${className}`}>
+      <ListHeader />
       <ListContainer>
         {
           competitions.map((item, i) => (

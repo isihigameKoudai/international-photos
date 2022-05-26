@@ -28,9 +28,9 @@ export const Tile: React.FC<Props> = ({ competition }) => (
   <div className={style.item}>
     <a className={`${style.link} ${ createColorStyle(competition.tileStyle)} `} href={ competition.link } target="_blank" rel="noopener noreferrer">
       <p className={style.text}>
-          <span className={style.name}>{ competition.name }</span><br/>
-          <span className={style.title}>{ competition.awards }</span><br/>
-          <span className={style.deadline}>{ competition.deadline }</span>
+        <span className={style.name}>{ competition.name }</span><br/>
+        <span className={style.title}>{ competition.awards }</span><br/>
+        <span className={style.deadline}>{ competition.deadlineLabel}</span>
       </p>
     </a>
   </div>

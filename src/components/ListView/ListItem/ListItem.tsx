@@ -1,29 +1,24 @@
 import * as React from 'react';
 import { memo } from 'react';
-import Grid from '@material-ui/core/Grid';
 
 import Competition from '@/model/competition';
+import GridRow, { GridRowProps } from '@/components/GridRow';
 import { ListItemStyle } from './style';
 
 type Props = {
   competition: Competition
   className?: string;
+  gridColumn?: GridRowProps['gridColumn']
 }
 
-const ListItem = memo<Props>(({ className = '', competition }) => (
+const ListItem = memo<Props>(({ className = '', gridColumn, competition }) => (
   <li className={`${ListItemStyle} ${className}`}>
     <a href={competition.link} target="_blank" rel="noopener">
-      <Grid
-        className={className}
-        container
-        justifyContent="space-between"
-        alignItems="center"
-        spacing={1}
-      >
-        <Grid className="name" item xs={4}>{ competition.name }</Grid>
-        <Grid className="awards" item xs={4}>{ competition.awards }</Grid>
-        <Grid className={`deadline ${ competition.isOpen && 'has-deadline' }`} item xs={4}>{ competition.deadlineLabel }</Grid>
-      </Grid>
+      <GridRow gridColumn={gridColumn}>
+        <p className='name'>{ competition.name }</p>
+        <p className='awards'>{ competition.awards }</p>
+        <p className={`deadline ${ competition.isOpen && 'has-deadline' }`}>{ competition.deadlineLabel }</p>
+      </GridRow>
     </a>
   </li>
 ));
