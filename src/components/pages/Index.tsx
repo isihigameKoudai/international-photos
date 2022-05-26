@@ -10,7 +10,6 @@ import { fetchToday } from "@/utils/date";
 import { Competition } from '@/model/competition';
 
 import SectionTitle from "@/components/SectionTitle";
-import ScrollIndicator from "@/components/ScrollIndicator";
 import ListView from '../ListView';
 import TileView from '../TileView';
 
@@ -30,15 +29,6 @@ const Index = memo<Props>(({ siteList }) => {
     setShowMode(mode)
   },[])
 
-  const onClickScroll = () => {
-    const $top = document.querySelector(".top");
-    const { height } = $top.getBoundingClientRect();
-
-    window.scroll({
-      top: height,
-      behavior: "smooth",
-    });
-  };
   const today: string = fetchToday()
   const isShowEmptyMessage = (deadline: string | null | undefined ): boolean => {
     const isEmpty = !deadline
@@ -53,21 +43,6 @@ const Index = memo<Props>(({ siteList }) => {
 
   return (
     <div id="top">
-      <div className={`${indexStyle.hero} top`}>
-        <div
-          className={`${style.container}`}
-          style={{
-            height: "100%",
-            display: "flex",
-            justifyContent: "flex-start",
-            alignItems: "center",
-          }}
-        >
-          <img src="/title.png" alt="tile" width="350" />
-        </div>
-        <ScrollIndicator onClickScroll={onClickScroll} />
-      </div>
-
       <main className={style.container} style={{ marginTop: 52 }}>
         {/* <SectionTitle title="Nearing the deadline" /> */}
         <SectionTitle title="Competitions" />
