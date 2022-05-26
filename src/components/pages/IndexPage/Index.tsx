@@ -12,6 +12,7 @@ import Competition, { CompetitionProps } from '@/model/competition';
 
 import SectionTitle from "@/components/SectionTitle";
 import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 import ListView from '../../ListView';
 import TileView from '../../TileView';
 
@@ -65,7 +66,7 @@ const Index = memo<Props>(({ competitionList }) => {
           showMode === 'tile' && <TileView competitions={competitions} />
         }
       </main>
-      <footer
+      <div
         className={`${style.container}`}
         style={{ padding: "60px 0 30px" }}
       >
@@ -134,16 +135,8 @@ const Index = memo<Props>(({ competitionList }) => {
             />
           </a>
         </div>
-        <div
-          style={{
-            textAlign: "center",
-            padding: "10px 0",
-            fontFamily: `"Yu Mincho", YuMincho, "Hiragino Minchō Pro", "Hiragino Mincho Pro", serif`,
-          }}
-        >
-          © 2020~2022 Bright and dizain
-        </div>
-      </footer>
+      </div>
+      <Footer />
     </div>
   )
 });
