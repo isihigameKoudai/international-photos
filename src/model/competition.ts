@@ -45,7 +45,7 @@ export default class Competition {
 
   get isOpen() {
     const hasDeadline: boolean = !!this.deadline;
-    return today > this.deadline && hasDeadline;
+    return today <= this.deadline && hasDeadline;
   }
 
   get deadlineLabel() {
