@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { useState, useCallback, memo } from 'react';
+import Image from 'next/image';
 import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
@@ -10,8 +11,9 @@ import Grid from '@material-ui/core/Grid';
 import Competition, { CompetitionProps } from '@/model/competition';
 
 import SectionTitle from "@/components/SectionTitle";
-import ListView from '../ListView';
-import TileView from '../TileView';
+import Header from '@/components/Header';
+import ListView from '../../ListView';
+import TileView from '../../TileView';
 
 import indexStyle from "@/assets/style/indexPage.module.scss";
 import style from '@/assets/style/layout.module.scss';
@@ -32,6 +34,7 @@ const Index = memo<Props>(({ competitionList }) => {
 
   return (
     <div id="top">
+      <Header />
       <main className={style.container} style={{ marginTop: 52 }}>
         {/* <SectionTitle title="Nearing the deadline" /> */}
         <SectionTitle title="Competitions" />

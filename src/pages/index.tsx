@@ -1,7 +1,7 @@
 import * as React from "react";
 import { NextPage, GetStaticProps } from "next";
 
-import Index, { Props }from '@/components/pages/Index';
+import Index, { Props }from '~/components/pages/IndexPage/Index';
 import { fetchCompetitions } from '@/service/api/competitions'
 
 const IndexPage: NextPage<Props> = (props) => {
