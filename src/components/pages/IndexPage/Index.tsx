@@ -109,8 +109,9 @@ const Index = memo<Props>(({ competitionList }) => {
           <SectionTitle title="contact" />
           <div className="inner inner-flex">
             {
-              socialMedeias.map(media => (
+              socialMedeias.map((media,i) => (
                 <LinkIcon
+                  key={`media-icon-${i}`}
                   href={media.url}
                   src={media.src}
                   alt={media.alt}

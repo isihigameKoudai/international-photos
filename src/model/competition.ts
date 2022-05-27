@@ -48,7 +48,7 @@ export default class Competition {
       this.deadline = null;
     } else {
       const { year, month, day } = divideDate(deadline);
-      this.deadline = new Date(year, month, day);
+      this.deadline = new Date(year, month - 1, day);
     }
   }
 
