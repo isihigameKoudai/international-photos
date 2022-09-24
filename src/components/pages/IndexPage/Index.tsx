@@ -26,12 +26,15 @@ type ShowMode = 'list' | 'tile';
 
 const Index = memo<Props>(({ competitionList }) => {
   const [showMode, setShowMode] = useState<ShowMode>('list')
-  const onChangeShowMode = useCallback((event, mode) => {
+  const onChangeShowMode = useCallback((event: React.MouseEvent<HTMLElement>, mode) => {
+    if(!mode) {
+      return;
+    }
     setShowMode(mode)
   },[])
 
   const competitions = competitionList.map(competition => new Competition(competition));
-  const willClosingSoonCompetition = useMemo(() => competitions.filter(competition => competition.willCloseSoon),[]);
+  const willClosingSoonCompetition = useMemo(() => competitions.filter(competition => competition.willCloseSoon),[competitions]);
 
   return (
     <div id="top" className={style}>
