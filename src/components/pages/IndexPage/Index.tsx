@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useState, useCallback, memo, useMemo } from 'react';
+import { useState, useCallback, memo } from 'react';
 import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
@@ -34,7 +34,7 @@ const Index = memo<Props>(({ competitionList }) => {
   },[])
 
   const competitions = competitionList.map(competition => new Competition(competition));
-  const willClosingSoonCompetition = useMemo(() => competitions.filter(competition => competition.willCloseSoon),[competitions]);
+  const willClosingSoonCompetition = competitions.filter(competition => competition.willCloseSoon);
 
   return (
     <div id="top" className={style}>
