@@ -17,7 +17,7 @@ export type GridRowProps = {
   tag?: React.ElementType
 }
 
-const GridRow: React.FC<GridRowProps> = ({ gridColumn, children, className,　tag: Tag = 'div' }) => (
+const GridRow: React.FC<GridRowProps> = ({ gridColumn, children, className, tag: Tag = 'div' }) => (
   <Tag className={ `${className} ${gridStyle(gridColumn)}` }>
     { children }
   </Tag>
