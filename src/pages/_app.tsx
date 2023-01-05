@@ -37,6 +37,7 @@ const App: NextPage<AppProps> = ({ Component, pageProps }) => {
         />
         <link rel="apple-touch-icon" href="/favicon.icon"></link>
         <meta name="theme-color" content="#fefefe" />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5718414808573209" crossOrigin="anonymous"></script>
       </Head>
       <Component {...pageProps} />
     </>
